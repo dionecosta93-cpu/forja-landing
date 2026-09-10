@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { plans, demoNote } from '../content/plans.js'
 import { IconCheck } from './icons.jsx'
-import StoreBadges from './StoreBadges.jsx'
+import DownloadCta from './DownloadCta.jsx'
 import { track } from '../lib/analytics.js'
 import styles from './Plans.module.css'
 
@@ -69,7 +69,7 @@ export default function Plans() {
 
         <div className={styles.foot} id="download">
           <p>Android e navegador · sincroniza na nuvem</p>
-          <StoreBadges source="plans" />
+          <DownloadCta source="plans" align="center" />
         </div>
       </div>
     </section>

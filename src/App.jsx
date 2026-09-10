@@ -6,6 +6,7 @@ import Solution from './components/Solution.jsx'
 import Features from './components/Features.jsx'
 import HowItWorks from './components/HowItWorks.jsx'
 import Benefits from './components/Benefits.jsx'
+import Testimonials from './components/Testimonials.jsx'
 import Differentiators from './components/Differentiators.jsx'
 import Trust from './components/Trust.jsx'
 import Plans from './components/Plans.jsx'
@@ -21,6 +22,7 @@ const SECTIONS = {
   features: Features,
   howItWorks: HowItWorks,
   benefits: Benefits,
+  testimonials: Testimonials,
   differentiators: Differentiators,
   trust: Trust,
   plans: Plans,
@@ -34,6 +36,7 @@ const SECTION_ORDER = [
   'features',
   'howItWorks',
   'benefits',
+  'testimonials',
   'differentiators',
   'trust',
   'plans',

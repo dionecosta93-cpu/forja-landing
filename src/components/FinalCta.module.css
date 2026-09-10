@@ -18,6 +18,11 @@
   pointer-events: none;
 }
 
+.eyebrow {
+  position: relative;
+  margin-bottom: 14px;
+}
+
 .title {
   position: relative;
   font-size: clamp(2rem, 5.6vw, 3.4rem);
@@ -35,11 +40,16 @@
   max-width: 46ch;
 }
 
-.badges {
+.kicker {
   position: relative;
-  margin-top: 30px;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--green);
 }
 
-.badges :global(.row) {
-  justify-content: center;
+.cta {
+  position: relative;
+  margin-top: 30px;
 }

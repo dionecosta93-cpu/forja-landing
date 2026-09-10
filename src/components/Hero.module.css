@@ -39,23 +39,15 @@
   max-width: 46ch;
 }
 
-.ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 30px;
-}
-
-.badges {
-  margin-top: 22px;
-}
-
-.trust {
-  margin-top: 18px;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
+.scope {
+  margin-top: 14px;
+  font-size: 0.95rem;
   color: var(--text-faint);
-  letter-spacing: 0.02em;
+  max-width: 46ch;
+}
+
+.ctas {
+  margin-top: 30px;
 }
 
 .visual {
@@ -73,11 +65,12 @@
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .sub {
+  .sub,
+  .scope {
     margin-inline: auto;
   }
-  .ctas,
-  .badges :global(.row) {
+  .ctas {
+    display: flex;
     justify-content: center;
   }
   .visual {

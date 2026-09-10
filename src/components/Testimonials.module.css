@@ -1,0 +1,117 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  background: var(--green-dim);
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.track {
+  margin: 44px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 26px 24px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.who {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.who strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.local {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+}
+
+.quote {
+  margin: 0;
+  position: relative;
+  padding-top: 14px;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -6px;
+  left: -2px;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--green);
+  opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+  .track {
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    grid-auto-columns: minmax(78%, 1fr);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: calc(-1 * var(--pad-x));
+    padding-inline: var(--pad-x);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .track::-webkit-scrollbar {
+    display: none;
+  }
+  .card {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .track {
+    grid-auto-columns: minmax(86%, 1fr);
+  }
+}

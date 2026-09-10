@@ -4,7 +4,8 @@
 // Envelope: { app_id, event, ts, session_id, user_id, props } -> POST <URL>/events
 //
 // Eventos da landing: page_view · hero_cta_click · demo_view · pricing_view ·
-//                     download_click · faq_open
+//                     download_click ({ store: 'apk' | 'web' }) · apk_help_open ·
+//                     social_proof_view · faq_open
 
 const APP_ID = (import.meta.env.VITE_APP_ID || '').trim()
 const API_URL = (import.meta.env.VITE_ANALYTICS_API_URL || '').trim()

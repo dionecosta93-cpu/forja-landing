@@ -1,0 +1,235 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .centerMobile {
+    align-items: center;
+    text-align: center;
+  }
+  .centerMobile .actions,
+  .centerMobile .assurance {
+    justify-content: center;
+  }
+}
+
+.note {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.center .actions {
+  justify-content: center;
+}
+
+.primary,
+.secondary {
+  min-width: 0;
+}
+
+.assurance {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--text-faint);
+}
+
+.center .assurance {
+  justify-content: center;
+}
+
+.secure {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--green);
+}
+
+.meta {
+  color: var(--text-dim);
+}
+
+.browser {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-dim);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.browser:hover {
+  color: var(--text);
+}
+
+.help {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  max-width: 52ch;
+}
+
+.helpBtn {
+  padding: 0;
+  color: var(--green);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.helpBtn:hover {
+  color: var(--text);
+}
+
+.trust {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+
+/* ---- Modal ---- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  animation: fade 0.15s ease;
+}
+
+.modal {
+  width: 100%;
+  max-width: 460px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 26px;
+  border-radius: var(--r-lg);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  text-align: left;
+}
+
+.modalHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.modalHead h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.close {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text-dim);
+  background: var(--card-2);
+}
+
+.close:hover {
+  color: var(--text);
+}
+
+.modalIntro {
+  margin-top: 12px;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.steps {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+}
+
+.steps li {
+  position: relative;
+  counter-increment: step;
+  padding-left: 40px;
+  font-size: 0.95rem;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--green-dim);
+  color: var(--green);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.modalNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.modalNote svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--green);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    animation: none;
+  }
+}

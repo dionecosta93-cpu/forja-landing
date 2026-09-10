@@ -1,9 +1,7 @@
 import { hero } from '../content/copy.js'
-import { track } from '../lib/analytics.js'
 import PhoneFrame from './PhoneFrame.jsx'
 import Screen from './screens/index.jsx'
-import StoreBadges from './StoreBadges.jsx'
-import { IconArrow } from './icons.jsx'
+import DownloadCta from './DownloadCta.jsx'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -19,21 +17,15 @@ export default function Hero() {
             ))}
           </h1>
           <p className={styles.sub}>{hero.subheadline}</p>
+          <p className={styles.scope}>{hero.scope}</p>
 
           <div className={styles.ctas}>
-            <a href="#planos" className="btn btn-primary" onClick={() => track('hero_cta_click', { source: 'hero' })}>
-              {hero.primaryCta}
-            </a>
-            <a href="#recursos" className="btn btn-ghost" onClick={() => track('demo_view', { source: 'hero_secondary' })}>
-              {hero.secondaryCta} <IconArrow width={18} height={18} />
-            </a>
+            <DownloadCta
+              source="hero"
+              centerOnMobile
+              secondary={{ label: hero.secondaryCta, href: '#recursos', event: 'demo_view' }}
+            />
           </div>
-
-          <div className={styles.badges}>
-            <StoreBadges source="hero" size="sm" />
-          </div>
-
-          <p className={styles.trust}>{hero.trust}</p>
         </div>
 
         <div className={styles.visual}>

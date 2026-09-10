@@ -53,9 +53,14 @@
   padding-top: 20px;
   border-top: 1px solid var(--line-soft);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px 16px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--text-faint);
+}
+
+.legal a:hover {
+  color: var(--text);
 }

@@ -1,5 +1,5 @@
 import { brand, nav } from '../content/copy.js'
-import { CONTACT_EMAIL } from '../content/links.js'
+import { CONTACT_EMAIL, PRIVACY_URL, LEGAL_NOTICE } from '../content/links.js'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -19,13 +19,17 @@ export default function Footer() {
           {nav.map((item) => (
             <a key={item.href} href={item.href}>{item.label}</a>
           ))}
+          <a href={`mailto:${CONTACT_EMAIL}?subject=Suporte%20Forja`}>Suporte</a>
           <a href={`mailto:${CONTACT_EMAIL}`}>Contato</a>
+          <a href={PRIVACY_URL} target="_blank" rel="noopener noreferrer">Política de privacidade</a>
         </nav>
       </div>
 
       <div className={`container ${styles.legal}`}>
-        <span>© {year} {brand.name}</span>
-        <span>Android e Web</span>
+        <span>© {year} {brand.name}{LEGAL_NOTICE ? ` · ${LEGAL_NOTICE}` : ''}</span>
+        <span>
+          Android e Web · <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+        </span>
       </div>
     </footer>
   )

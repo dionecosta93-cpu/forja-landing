@@ -1,17 +1,27 @@
 // -----------------------------------------------------------------------------
-// O app Forja é empacotado para Android (Capacitor) e roda também no navegador
-// (TanStack Start SSR + PWA). Não há projeto iOS no código-fonte.
+// O app Forja é distribuído como APK direto pelo site (sem loja) e roda também
+// no navegador (TanStack Start SSR + PWA). Não há projeto iOS no código-fonte.
 //
-// PENDÊNCIA: preencher com as URLs reais quando publicado.
-//   - PLAY_STORE_URL: link da ficha na Google Play
-//   - WEB_APP_URL: domínio onde o app web estará hospedado
-// Enquanto forem "#", os CTAs rolam até a seção de planos.
+// PENDÊNCIAS: preencher com os valores reais antes de publicar.
+//   - APK_URL: caminho do .apk. O arquivo vai em `public/downloads/forja.apk`
+//     e é servido em `/downloads/forja.apk` no build.
+//   - APK_SIZE / APK_VERSION: tamanho e versão exibidos ao lado do botão.
+//   - WEB_APP_URL: domínio onde o app web estará hospedado ("#" -> rola até planos).
+//   - CONTACT_EMAIL: e-mail real de contato/suporte.
+//   - LEGAL_NOTICE: razão social + CNPJ do responsável, se houver. Vazio = não exibe.
 // -----------------------------------------------------------------------------
-export const PLAY_STORE_URL = '#'
+
+export const APK_URL = '/downloads/forja.apk'
+export const APK_SIZE = '12 MB'
+export const APK_VERSION = 'v1.0.0'
+
 export const WEB_APP_URL = '#'
 
 export const CONTACT_EMAIL = 'contato@forja.app' // PENDÊNCIA: e-mail real
+export const PRIVACY_URL = '/privacidade.html'
 
-// Analytics: mesma camada do app (src/lib/track.ts). Desligada sem estes valores.
-// Defina no .env: VITE_APP_ID e VITE_ANALYTICS_API_URL
-export const hasStoreLinks = PLAY_STORE_URL !== '#'
+// PENDÊNCIA: ex. "Fulano de Tal ME · CNPJ 00.000.000/0001-00". Vazio enquanto não houver.
+export const LEGAL_NOTICE = ''
+
+// Analytics: mesma camada do app (src/lib/track.ts). Desligada sem VITE_APP_ID
+// e VITE_ANALYTICS_API_URL no .env.

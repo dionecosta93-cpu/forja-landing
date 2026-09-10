@@ -20,8 +20,9 @@ npm run preview  # http://localhost:4173
 ## Estrutura
 
 - `src/content/` — toda a copy sensível a conversão (`copy.js`), planos (`plans.js`),
-  FAQ (`faq.js`), links (`links.js`). **Variações de A/B = trocar uma linha aqui.**
-  A ordem das seções fica em `src/App.jsx` (`SECTION_ORDER`).
+  FAQ (`faq.js`), depoimentos (`testimonials.js`), links (`links.js`).
+  **Variações de A/B = trocar uma linha aqui.** A ordem das seções fica em
+  `src/App.jsx` (`SECTION_ORDER`).
 - `src/components/` — seções da página. `screens/` = recriações das telas do app.
 - `src/lib/analytics.js` — `track()` com o mesmo contrato do app (`/events`, `sendBeacon`).
 - `src/lib/useReveal.js` — reveal on scroll via IntersectionObserver.
@@ -29,20 +30,23 @@ npm run preview  # http://localhost:4173
 ## Seções (funil de conversão)
 
 Header → Hero → Problema → Solução → Demonstração (Funcionalidade → Benefício, 8 telas) →
-Como funciona → Benefícios → Diferenciais → Confiança → Planos → FAQ → CTA final → Footer.
-CTA fixo no rodapé no mobile.
+Como funciona → Benefícios → Depoimentos → Diferenciais → Confiança → Planos → FAQ →
+CTA final → Footer. CTA fixo no rodapé no mobile.
 
 ## Pendências (preencher antes de publicar)
 
 | Item | Onde | Situação |
 |---|---|---|
-| Link da Google Play | `src/content/links.js` → `PLAY_STORE_URL` | `"#"` — CTAs rolam até os planos |
-| URL do app web (PWA) | `src/content/links.js` → `WEB_APP_URL` | `"#"` |
+| Instalador Android | `public/downloads/forja.apk` | não existe — gerar e commitar (deploy vem do push) |
+| Tamanho / versão do APK | `src/content/links.js` → `APK_SIZE`, `APK_VERSION` | valores de exemplo (`12 MB` · `v1.0.0`) |
+| URL do app web (PWA) | `src/content/links.js` → `WEB_APP_URL` | `"#"` — link "Usar no navegador" rola até os planos |
 | Analytics | `.env` → `VITE_APP_ID`, `VITE_ANALYTICS_API_URL` | desligado sem os valores |
 | E-mail de contato | `src/content/links.js` → `CONTACT_EMAIL` | placeholder |
-| Imagem Open Graph | `public/og-image.png` | não existe — gerar |
-| Prova social | seção "Confiança" (`Trust.jsx` / `copy.js`) | sem dados falsos; adicionar avaliações reais da Play Store e nº de usuários quando existirem |
+| Responsável legal / CNPJ | `src/content/links.js` → `LEGAL_NOTICE` | vazio — footer não exibe até preencher |
+| Imagem Open Graph | `public/og-image.png` | existe |
+| Depoimentos | `src/content/testimonials.js` | 5 relatos reais de beta testers; adicionar mais conforme a base cresce |
 | iOS | — | o app só tem projeto Android + web; nenhuma menção a App Store/iOS foi feita |
+| Google Play | — | removido: distribuição é APK direto pelo site + PWA |
 
 ## Observações de fidelidade
 

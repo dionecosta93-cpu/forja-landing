@@ -14,9 +14,34 @@ export const hero = {
   headline: 'Você sabe o que precisa fazer.\nA Forja faz você fazer.',
   subheadline:
     'Transforme suas metas em tarefas do dia, entre no Modo Foco e veja sua disciplina virar XP, níveis e sequências. Sem depender de motivação.',
+  // Sub-linha de escopo — evita a sensação de "faz tudo e nada bem".
+  scope: 'Rotina, foco, leitura e finanças — tudo num só lugar, guiado por disciplina.',
   primaryCta: 'Baixar a Forja',
   secondaryCta: 'Ver como funciona',
+}
+
+// Bloco do fluxo de download direto do APK (sem loja). Reaproveitado no hero,
+// nos planos e no CTA final via <DownloadCta />.
+export const download = {
+  primaryCta: 'Baixar a Forja',
+  browserCta: 'Usar no navegador',
+  secure: 'Conexão segura',
+  helpIntro: 'Instalação segura fora da Play Store — te mostramos como autorizar em 10 segundos.',
+  helpCta: 'Como instalar',
   trust: 'Grátis para começar · Modo demonstração com acesso total · Sem cartão',
+  help: {
+    title: 'Instalar a Forja em 10 segundos',
+    intro:
+      'A Forja é distribuída fora da Play Store, então o Android pede uma permissão única antes de instalar. É rápido e você pode desfazer depois.',
+    steps: [
+      'Toque em "Baixar a Forja" e espere o download do arquivo .apk terminar.',
+      'Abra o arquivo pela notificação de download ou pela pasta Downloads.',
+      'Quando o Android avisar sobre "fontes desconhecidas", toque em Configurações.',
+      'Ative "Permitir instalar desta fonte" para o seu navegador.',
+      'Volte, toque em Instalar e abra a Forja.',
+    ],
+    note: 'Você pode desativar essa permissão depois da instalação. A Forja não pede acesso a contatos, SMS ou localização.',
+  },
 }
 
 export const problem = {
@@ -165,13 +190,17 @@ export const trust = {
     '"Motivação te tira da cama. Disciplina te faz treinar mesmo cansado."',
     '"Você nunca se arrepende de terminar uma tarefa. Apenas de adiá-la."',
   ],
-  note: 'Avaliações da loja e número de usuários entram aqui quando o app for publicado.',
+  note: 'Métricas de uso e novos depoimentos entram aqui conforme a base de usuários cresce.',
 }
 
 export const finalCta = {
+  eyebrow: 'Dia 1',
   title: 'Comece a forjar sua\ndisciplina hoje',
   body: 'Baixe grátis, monte a rotina de amanhã em cinco minutos e deixe o sistema fazer o resto.',
-  cta: 'Baixar a Forja',
+  // Resumo de 1 linha do que a pessoa ganha ao clicar.
+  kicker: 'Acesso total · Sem cartão · Comece em 30 segundos',
+  // Texto secundário desta seção (varia por seção — no hero é "Ver como funciona").
+  note: 'Comece seu Dia 1 agora e ative o Modo Demonstração.',
 }
 
 export const nav = [

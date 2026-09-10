@@ -45,3 +45,9 @@ export const IconLayers = (p) => (
 export const IconStore = (p) => (
   <svg {...s} {...p}><path d="M4 9V5h16v4M4 9h16l-1 11H5L4 9ZM9 13h6" /></svg>
 )
+export const IconDownload = (p) => (
+  <svg {...s} {...p}><path d="M12 3v12M7 11l5 5 5-5M5 21h14" /></svg>
+)
+export const IconGlobe = (p) => (
+  <svg {...s} {...p}><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" /></svg>
+)
