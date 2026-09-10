@@ -30,8 +30,8 @@ npm run preview  # http://localhost:4173
 ## Seções (funil de conversão)
 
 Header → Hero → Problema → Solução → Demonstração (Funcionalidade → Benefício, 8 telas) →
-Como funciona → Benefícios → Depoimentos → Diferenciais → Confiança → Planos → FAQ →
-CTA final → Footer. CTA fixo no rodapé no mobile.
+Como funciona → Benefícios → Depoimentos → Diferenciais → Confiança → Comando de voz →
+Planos → FAQ → CTA final → Footer. CTA fixo no rodapé no mobile.
 
 ## Pendências (preencher antes de publicar)
 

@@ -51,3 +51,6 @@ export const IconDownload = (p) => (
 export const IconGlobe = (p) => (
   <svg {...s} {...p}><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" /></svg>
 )
+export const IconMic = (p) => (
+  <svg {...s} {...p}><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" /></svg>
+)

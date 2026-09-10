@@ -9,6 +9,7 @@ import Benefits from './components/Benefits.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import Differentiators from './components/Differentiators.jsx'
 import Trust from './components/Trust.jsx'
+import Voice from './components/Voice.jsx'
 import Plans from './components/Plans.jsx'
 import Faq from './components/Faq.jsx'
 import FinalCta from './components/FinalCta.jsx'
@@ -25,6 +26,7 @@ const SECTIONS = {
   testimonials: Testimonials,
   differentiators: Differentiators,
   trust: Trust,
+  voice: Voice,
   plans: Plans,
   faq: Faq,
   finalCta: FinalCta,
@@ -39,6 +41,7 @@ const SECTION_ORDER = [
   'testimonials',
   'differentiators',
   'trust',
+  'voice',
   'plans',
   'faq',
   'finalCta',

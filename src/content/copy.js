@@ -179,6 +179,38 @@ export const differentiators = {
   ],
 }
 
+export const voice = {
+  eyebrow: 'Comando de voz',
+  title: 'Fale. A Forja organiza.',
+  subtitle:
+    'Sem abrir tela, sem digitar. Só fala o que precisa e a Forja lança direto no lugar certo.',
+  examples: [
+    { say: 'Treino de força às 7 da manhã', result: 'cai direto na Agenda' },
+    { say: 'Gastei 45 reais no mercado', result: 'cai direto em Finanças, já categorizado' },
+    { say: 'Terminei de ler mais 20 páginas', result: 'atualiza o progresso em Leitura' },
+  ],
+  bullets: [
+    'Cria tarefas por voz',
+    'Lança gastos direto nas Finanças',
+    'Atualiza progresso sem precisar digitar',
+  ],
+  limits: [
+    {
+      plan: 'Plano Gratuito',
+      text: '3 comandos de voz por dia — experimente a praticidade.',
+      highlight: false,
+    },
+    {
+      plan: 'Plano Pago',
+      text: 'Comandos de voz ilimitados (ou uso justo) — organize o dia inteiro só falando.',
+      highlight: true,
+    },
+  ],
+  // NOTA DE IMPLEMENTAÇÃO: o limite de 3/dia no plano gratuito é um ponto de
+  // partida. Ajustar conforme o custo real por chamada da API de voz, garantindo
+  // margem de lucro saudável no plano pago antes de publicar em produção.
+}
+
 export const trust = {
   eyebrow: 'Comece sem risco',
   title: 'Acesso total pra você testar',
