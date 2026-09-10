@@ -180,10 +180,10 @@ export const differentiators = {
 }
 
 export const voice = {
-  eyebrow: 'Comando de voz',
+  eyebrow: 'Comando de voz no chat',
   title: 'Fale. A Forja organiza.',
   subtitle:
-    'Sem abrir tela, sem digitar. Só fala o que precisa e a Forja lança direto no lugar certo.',
+    'No chat da Forja, toque no microfone e diga o que precisa. O assistente entende e lança direto no lugar certo — sem digitar.',
   examples: [
     { say: 'Treino de força às 7 da manhã', result: 'cai direto na Agenda' },
     { say: 'Gastei 45 reais no mercado', result: 'cai direto em Finanças, já categorizado' },
