@@ -1,0 +1,29 @@
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  padding: 12px var(--pad-x) calc(12px + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, transparent, rgba(10, 10, 10, 0.92) 30%);
+  transform: translateY(120%);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.bar.show {
+  transform: none;
+  pointer-events: auto;
+}
+
+.bar :global(.btn) {
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--green-strong);
+}
+
+@media (min-width: 720px) {
+  .bar {
+    display: none;
+  }
+}

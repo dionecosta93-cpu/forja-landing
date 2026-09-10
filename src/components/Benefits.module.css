@@ -1,0 +1,47 @@
+.grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 26px 24px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--green-dim);
+  color: var(--green);
+}
+
+.title {
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-size: 1.14rem;
+}
+
+.body {
+  margin-top: 8px;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

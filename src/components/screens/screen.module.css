@@ -1,0 +1,253 @@
+/* Base de todas as telas do app recriadas. Escala com o tamanho do frame
+   via container query units, então tudo interno usa em. */
+.app {
+  container-type: inline-size;
+  background: #0a0a0a;
+  color: #f4f5f6;
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app * {
+  box-sizing: border-box;
+}
+
+.scale {
+  font-size: 3.55cqw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.body {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 1.4em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 1.6em 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: #cfd2d6;
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9em;
+  letter-spacing: -0.02em;
+  padding: 0.1em 1.4em 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.sub {
+  color: #9aa0a6;
+  font-size: 0.92em;
+  padding: 0 1.4em 0.7em;
+  margin-top: -0.3em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.green {
+  color: var(--green);
+}
+.orange {
+  color: var(--orange);
+}
+.red {
+  color: var(--red);
+}
+.blue {
+  color: var(--blue);
+}
+.dim {
+  color: #9aa0a6;
+}
+
+.card {
+  background: #161616;
+  border: 1px solid #242424;
+  border-radius: 1.4em;
+  padding: 1.1em;
+}
+
+.cardTight {
+  background: #161616;
+  border: 1px solid #242424;
+  border-radius: 1.1em;
+  padding: 0.85em 1em;
+}
+
+.rowBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.progress {
+  height: 0.5em;
+  border-radius: 999px;
+  background: #262626;
+  overflow: hidden;
+}
+.progress > i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--green);
+}
+.progress.grad > i {
+  background: linear-gradient(90deg, #ef4444, #f5a524 55%, #28d46e);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.25em 0.7em;
+  border-radius: 999px;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.pillGreen {
+  background: var(--green-dim);
+  color: var(--green);
+}
+.pillOrange {
+  background: var(--orange-dim);
+  color: var(--orange);
+}
+.pillRed {
+  background: var(--red-dim);
+  color: var(--red);
+}
+.pillBlue {
+  background: var(--blue-dim);
+  color: var(--blue);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7em 0.6em 1.1em;
+  border-top: 1px solid #1c1c1c;
+  background: #0c0c0c;
+}
+.nav span {
+  font-family: var(--font-mono);
+  font-size: 0.6em;
+  letter-spacing: 0.06em;
+  color: #6b7075;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35em;
+}
+.nav span.on {
+  color: var(--green);
+}
+.nav span svg {
+  opacity: 0.55;
+}
+.nav span.on svg {
+  opacity: 1;
+}
+
+.fab {
+  position: absolute;
+  right: 1.1em;
+  bottom: 4.4em;
+  width: 3.4em;
+  height: 3.4em;
+  border-radius: 999px;
+  background: var(--green);
+  color: #05130b;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 2.2em var(--green-glow);
+  font-size: 1em;
+}
+
+.bigBtn {
+  margin: 0.2em 1.4em 0;
+  padding: 1em;
+  border-radius: 1em;
+  background: #fff;
+  color: #0a0a0a;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.05em;
+  letter-spacing: -0.01em;
+}
+.bigBtn.greenBtn {
+  background: var(--green);
+  color: #05130b;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.4em;
+  background: #161616;
+  border: 1px solid #242424;
+  border-radius: 999px;
+  padding: 0.4em;
+  margin: 0 1.4em 0.9em;
+}
+.tabs b {
+  flex: 1;
+  text-align: center;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.55em 0;
+  border-radius: 999px;
+  color: #9aa0a6;
+}
+.tabs b.on {
+  background: var(--green);
+  color: #05130b;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8em;
+}
+.stat {
+  background: #161616;
+  border: 1px solid #242424;
+  border-radius: 1.1em;
+  padding: 0.9em;
+}
+.stat small {
+  font-family: var(--font-mono);
+  font-size: 0.62em;
+  letter-spacing: 0.1em;
+  color: #9aa0a6;
+  text-transform: uppercase;
+}
+.stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.7em;
+  margin-top: 0.2em;
+}

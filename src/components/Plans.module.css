@@ -1,0 +1,153 @@
+.wrap {
+  border-top: 1px solid var(--line-soft);
+  background: var(--bg-elev);
+}
+
+.demo {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  padding: 16px 20px;
+  border-radius: var(--r-md);
+  background: var(--green-dim);
+  border: 1px solid rgba(40, 212, 110, 0.3);
+}
+
+.demo strong {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.demo span {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 26px;
+  border-radius: var(--r-lg);
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+}
+
+.features {
+  flex: 1;
+}
+
+.cta {
+  margin-top: auto;
+}
+
+.highlight {
+  border-color: var(--green);
+  box-shadow: 0 0 0 1px var(--green), 0 30px 70px -40px var(--green-glow);
+}
+
+.badge {
+  position: absolute;
+  top: -11px;
+  left: 26px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #150c00;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.price {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.1rem;
+  letter-spacing: -0.02em;
+}
+
+.price span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.summary {
+  margin-top: 8px;
+  color: var(--text-dim);
+  font-size: 0.94rem;
+  min-height: 2.6em;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 24px;
+  display: grid;
+  gap: 11px;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.check {
+  flex: none;
+  margin-top: 3px;
+  color: var(--green);
+}
+
+.cta {
+  width: 100%;
+}
+
+.foot {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.foot p {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-inline: auto;
+  }
+  .summary {
+    min-height: 0;
+  }
+}

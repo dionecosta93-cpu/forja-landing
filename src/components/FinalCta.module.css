@@ -1,0 +1,45 @@
+.wrap {
+  border-top: 1px solid var(--line-soft);
+}
+
+.inner {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glow {
+  position: absolute;
+  inset: -40% 0 auto;
+  height: 420px;
+  background: radial-gradient(45% 60% at 50% 30%, var(--green-dim), transparent 70%);
+  pointer-events: none;
+}
+
+.title {
+  position: relative;
+  font-size: clamp(2rem, 5.6vw, 3.4rem);
+}
+
+.title span:last-child br {
+  display: none;
+}
+
+.body {
+  position: relative;
+  margin-top: 18px;
+  color: var(--text-dim);
+  font-size: 1.08rem;
+  max-width: 46ch;
+}
+
+.badges {
+  position: relative;
+  margin-top: 30px;
+}
+
+.badges :global(.row) {
+  justify-content: center;
+}
