@@ -196,8 +196,8 @@ export const voice = {
   ],
   limits: [
     {
-      plan: 'Plano Gratuito',
-      text: '3 comandos de voz por dia — experimente a praticidade.',
+      plan: 'Plano Grátis',
+      text: '3 comandos de voz grátis por dia, todo dia — experimente a praticidade.',
       highlight: false,
     },
     {
@@ -206,9 +206,10 @@ export const voice = {
       highlight: true,
     },
   ],
-  // NOTA DE IMPLEMENTAÇÃO: o limite de 3/dia no plano gratuito é um ponto de
-  // partida. Ajustar conforme o custo real por chamada da API de voz, garantindo
-  // margem de lucro saudável no plano pago antes de publicar em produção.
+  // NOTA DE IMPLEMENTAÇÃO: são 3 comandos de voz por dia no plano grátis (recorrente,
+  // não é trial de 3 dias). Esse número é um ponto de partida — ajustar conforme o
+  // custo real por chamada da API de voz, garantindo margem de lucro saudável no
+  // plano pago antes de publicar em produção.
 }
 
 export const trust = {
