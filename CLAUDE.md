@@ -87,10 +87,13 @@ those references.
   Do not try to size it via `.visual > div { --phone-w }` in a parent module — that path
   proved fragile; the inline prop is the supported way.
 
-- **`src/lib/analytics.js`** — `track(event, props)`. Mirrors the app's `track.ts`:
-  env-gated by `VITE_APP_ID` + `VITE_ANALYTICS_API_URL` (see `.env.example`), otherwise
-  no-op (logs in dev). Sends `{ app_id, event, ts, session_id, user_id, props }` via
-  `sendBeacon` to `<API_URL>/events`. Landing events: `page_view`, `hero_cta_click`,
+- **`src/lib/analytics.js`** — `track(event, props)`. Mirrors the app's `track.ts`,
+  speaking the Codane Analytics hub contract: env-gated by `VITE_APP_ID` +
+  `VITE_ANALYTICS_API_URL` + `VITE_ANALYTICS_INGEST_KEY` (see `.env.example`, and use
+  the same app_id/ingest_key as the Forja app so the landing→app funnel is one
+  "aplicativo" in the panel), otherwise no-op (logs in dev). Sends
+  `{ app_id, ingest_key, event, user_id, timestamp, platform, properties }` via
+  `sendBeacon` to `<API_URL>/api/events`. Landing events: `page_view`, `hero_cta_click`,
   `demo_view`, `pricing_view`, `download_click` (`{ store: 'apk' | 'web' }`),
   `apk_help_open`, `social_proof_view`, `faq_open`.
 

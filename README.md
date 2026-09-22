@@ -24,7 +24,8 @@ npm run preview  # http://localhost:4173
   **Variações de A/B = trocar uma linha aqui.** A ordem das seções fica em
   `src/App.jsx` (`SECTION_ORDER`).
 - `src/components/` — seções da página. `screens/` = recriações das telas do app.
-- `src/lib/analytics.js` — `track()` com o mesmo contrato do app (`/events`, `sendBeacon`).
+- `src/lib/analytics.js` — `track()` com o mesmo contrato do app, falando com o painel
+  Codane Analytics (`/api/events`, `sendBeacon`).
 - `src/lib/useReveal.js` — reveal on scroll via IntersectionObserver.
 
 ## Seções (funil de conversão)
@@ -40,7 +41,7 @@ Planos → FAQ → CTA final → Footer. CTA fixo no rodapé no mobile.
 | Instalador Android | `public/downloads/forja.apk` | não existe — gerar e commitar (deploy vem do push) |
 | Tamanho / versão do APK | `src/content/links.js` → `APK_SIZE`, `APK_VERSION` | valores de exemplo (`12 MB` · `v1.0.0`) |
 | URL do app web (PWA) | `src/content/links.js` → `WEB_APP_URL` | `"#"` — link "Usar no navegador" rola até os planos |
-| Analytics | `.env` → `VITE_APP_ID`, `VITE_ANALYTICS_API_URL` | desligado sem os valores |
+| Analytics | `.env` → `VITE_APP_ID`, `VITE_ANALYTICS_API_URL`, `VITE_ANALYTICS_INGEST_KEY` | desligado sem os valores |
 | E-mail de contato | `src/content/links.js` → `CONTACT_EMAIL` | placeholder |
 | Responsável legal / CNPJ | `src/content/links.js` → `LEGAL_NOTICE` | vazio — footer não exibe até preencher |
 | Imagem Open Graph | `public/og-image.png` | existe |
